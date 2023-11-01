@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tongue-twister/static/css/main.e6c13ad2.css",
-    "main.js": "/tongue-twister/static/js/main.68d88e59.js",
+    "main.js": "/tongue-twister/static/js/main.849415a9.js",
     "static/js/787.d58ad55c.chunk.js": "/tongue-twister/static/js/787.d58ad55c.chunk.js",
     "index.html": "/tongue-twister/index.html",
     "main.e6c13ad2.css.map": "/tongue-twister/static/css/main.e6c13ad2.css.map",
-    "main.68d88e59.js.map": "/tongue-twister/static/js/main.68d88e59.js.map",
+    "main.849415a9.js.map": "/tongue-twister/static/js/main.849415a9.js.map",
     "787.d58ad55c.chunk.js.map": "/tongue-twister/static/js/787.d58ad55c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.68d88e59.js"
+    "static/js/main.849415a9.js"
   ]
 }
