@@ -2,16 +2,22 @@ import { useEffect, useState } from "react";
 import { createRecognizer } from "./recognizer";
 import twisters from './twisters.json'
 
+
+
 import levenshtein from "fast-levenshtein"
+import { useSearchParams } from "react-router-dom";
 
 
-const nextTwister = ()=>twisters[Math.floor(Math.random()*twisters.length)];
+const nextTwisterID = ()=>Math.floor(Math.random()*twisters.length);
 
 function App() {
 
+  const [searchParams, setSearchParams] = useSearchParams();
 
+  let twisterID = searchParams.get('id') !== undefined ? searchParams.get('id') :  nextTwisterID()
+
+  let twister =  twisters[twisterID];
   
-  const [twister, setTwister] = useState(()=>nextTwister());
 
   const [active, setActive] = useState(false);
   
@@ -105,16 +111,13 @@ function App() {
           }}>{active ? "Stop" : "Start"}</button>
 
           <button onClick={ ()=>{
-              setTwister(nextTwister());
+              setSearchParams({id:nextTwisterID()});
               setSpeech({
                 interim: "",
                 chunks: []
               });
           }}> Next Twister </button>
-
         </div>
-
-
 
 
         <p>{recorded.map( (x,i) => <span key={i} style={{opacity: x.conf}}> {x.word} </span> )}</p>
